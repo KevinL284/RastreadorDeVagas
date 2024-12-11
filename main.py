@@ -7,7 +7,7 @@ options = webdriver.ChromeOptions()
 options.binary_location = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"  # Localização do Brave
 
 driver = webdriver.Chrome(options=options)
-driver.get("https://www.indeed.com.br/")
+driver.get("https://www.indeed.com.br/") #da pra usar o linkedin mas a tela de login vai atrapalhar.
 
 # Aplicando filtros
 wait = WebDriverWait(driver, 10)
@@ -15,7 +15,7 @@ location_input = wait.until(EC.presence_of_element_located((By.NAME, "l")))
 location_input.send_keys("João Pessoa, PB")
 
 search_input = driver.find_element(By.NAME, "q")
-search_input.send_keys("Desenvolvedor Python")
+search_input.send_keys("Desenvolvedor Python") #se divirta procurando aqui
 
 search_button = driver.find_element(By.XPATH, '//button[@type="submit"]')
 search_button.click()
