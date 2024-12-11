@@ -30,3 +30,5 @@ for title in job_titles:
     print(title.text)
 
 driver.quit()
+
+#ainda estou trabalhando nesse sisteminha
